@@ -1,0 +1,68 @@
+@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@500&family=Fauna+One&display=swap");
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1 {
+  font-family: "Cinzel", serif;
+  text-align: center;
+  font-size: 3rem;
+  letter-spacing: 1px;
+}
+
+h2,
+h5 {
+  font-family: "Fauna One", serif;
+  font-size: 1.5rem;
+}
+
+.count-container {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: -15vh;
+}
+
+h2 {
+  color: rgb(30, 140, 225);
+}
+
+.count {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 5rem;
+}
+
+.count h2 {
+  margin: -40px;
+}
+
+.countN {
+  display: flex;
+  gap: 30px;
+}
+
+@media (max-width: 400px) {
+  .countN {
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+  }
+
+  .count-container {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 5rem;
+  }
+}
