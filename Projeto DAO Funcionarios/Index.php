@@ -14,6 +14,7 @@ require_once "Classes/Conexao.php";
 <button type="button" name="link"><a href="Pages/RegisterForm.php">Adicionar</a></button>
 <table>
     <tr>
+        <th>Imagem</th>
         <th>ID Funcionario</th>
         <th>Nome</th>
         <th>Data Nascimento</th>
