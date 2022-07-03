@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
@@ -8,8 +8,6 @@
     <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/9a93fc2a85.js" crossorigin="anonymous"></script>
     <!-- Reset css -->
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="view/css/reset.css">
     <!-- Google Fonts -->
 </head>
 

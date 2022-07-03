@@ -4,7 +4,7 @@ let numeroChange;
 
 // TODO: Pelo amor de Deus, otimiza esse codigo o mais rapido possivel. - 08/06/2022
 
-  const numbFilter = addEventListener("input", (event) => {
+const numbFilter = addEventListener("input", (event) => {
   tipoPokemon.addEventListener("change", () => {
   let numeroChange = event.target.value.trim();
 

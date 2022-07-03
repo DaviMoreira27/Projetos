@@ -1,0 +1,21 @@
+{
+  "name": "vendor_name/megasenaphp",
+  "description": "Aplicação consumindo a API de resultados da Megasena",
+  "minimum-stability": "stable",
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "davis",
+      "email": "davimsantana2706@gmail.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+        "App\\": "app/"
+    }
+  },
+  "require": {
+    "ext-curl": "*",
+    "ext-http": "*"
+  }
+}

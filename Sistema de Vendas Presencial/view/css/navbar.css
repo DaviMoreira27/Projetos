@@ -1,10 +1,11 @@
+@import "reset.css";
 
 header{
     display: flex;
     flex-direction: column;
     gap: 25%;
     width: 15rem;
-    height: 100vh;
+    height: calc(100vh + 4rem) ;
     background-color: #425878;
     padding: 1rem;
 }
@@ -25,7 +26,7 @@ nav #menu-list{
 #span-header{
     color: rgb(0, 255, 136);
 }
-h1, li{
+header h1, li{
     color: white;
 }
 
@@ -46,4 +47,5 @@ h1, li{
 #newBuy{
     margin-top:-5rem;
     margin-bottom: 5rem;
+    cursor: pointer;
 }
