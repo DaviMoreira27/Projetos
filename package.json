@@ -1,12 +1,12 @@
 {
   "dependencies": {
+    "@glidejs/glide": "^3.5.2",
     "jshint": "^2.13.4"
   },
   "name": "yes",
   "description": "The main projects that I made so far. I'm studying design, back-end and front-end, here I get all that I learned until now and gather in this repository.",
   "version": "1.0.0",
   "main": "yes",
-  "devDependencies": {},
   "scripts": {
     "test": "lets"
   },
