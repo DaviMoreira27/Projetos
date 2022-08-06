@@ -1,0 +1,71 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    gap: 2rem;
+}
+
+.add-task{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    padding: 1rem;
+}
+
+#add-task{
+    padding: 1rem;
+    width: 20rem;
+    border-radius: 15px;
+    border: 1px solid rgba(255, 70, 70, 0.933);
+}
+
+input{
+    outline-color: #f23333ee;
+}
+
+input[type=text]::placeholder{
+    color: #ff4646ee;
+}
+
+#btn-add-task{
+    padding: 1rem;
+    border: 1px solid #ff4646ee;
+    background-color: #ff4646ee;
+    text-transform: uppercase;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    border-radius: 15px;
+    color:#ffffff ;
+}
+
+#list{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    width: 30rem;
+    align-items: center;
+    gap: 1rem;
+}
+
+#list li{
+    padding: 1rem;
+    background-color: #d25353ee;
+    width: 100%;
+    color: #ffffff;
+    border-radius: 15px;
+}
+
+#list li label{
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.2rem;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
