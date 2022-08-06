@@ -4,17 +4,207 @@
     box-sizing: border-box;
 }
 
+ul, li{
+    list-style: none;
+}
+
 /* Header */
 
 #logo{
-    width: 130px;
+    width: 100px;
     max-width: 100%;
-    height: 110px;
+    height: 80px;
 }
 
 nav .icons-nav img{
-    width: 30px;
+    width: 25px;
     max-width: 100%;
 }
 
+.icons-nav{
+    display: flex;
+    align-items: center;
+    height: 100%;
+    gap: .8rem;
+}
+
+nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .8rem;
+    background-color: #ffffff;
+    margin-right: 1rem;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    margin-top: -1rem;
+    background-color: #ffffff;
+    border-bottom: .5px solid black;
+    width: 100%;
+}
+
+.perfil-photo img{
+    width: 100%;
+    border-radius: 50%;
+}
+
+.perfil-photo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    border: 1px solid black;
+    border-radius: 50%;
+    padding: 1px;
+}
+
+/* Profiles */
+
+main{
+    background-color: #FAFAFA;
+    display: flex;
+    flex-direction: column;
+}
+
+.perfil-info{
+    display: flex;
+    justify-content: start;
+    gap: 2rem;
+    padding: 1rem;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.perfil-photo2{
+    width: 80px;
+}
+
+.perfil-photo2 img{
+    width: 100%;
+    border-radius: 50%;
+}
+
+.perfil-name{
+    display: flex;
+    flex-direction: column;
+    gap: .6rem;
+}
+
+.name-config{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.perfil-name h2{
+    font-weight: 300;
+}
+
+#edit-profile{
+    background-color: transparent;
+    border: 1px solid #c8c4c4;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    padding: .5rem;
+    font-weight: 500;
+}
+
+#name{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    padding-left: 1rem;
+}
+
 /* Numbers */
+
+
+.numbers-info{
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem;
+    gap: 1rem;
+}
+
+.numeros-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .2rem;
+}
+
+.numbers-numbers{
+    display: flex;
+    justify-content: space-around;
+
+}
+
+.numero{
+    font-weight: 500;
+}
+
+.numbers-informations{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 14px;
+}
+
+.icons-numbers{
+    display: flex;
+    justify-content: space-around;
+}
+
+.icons-numbers img{
+    width: 30px;
+}
+
+#correct{
+    margin-left: 18px;
+}
+
+/* Play Store e App Store */
+
+.download{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.titles-download{
+    display: flex;
+    flex-direction: column;
+    gap: .8rem;
+}
+
+.download img{
+    width: 150px;
+}
+
+.download h2{
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.download h3 {
+    font-size: 16px;
+    font-weight: 400;
+}
+
+/* Fotos section */
+
+.photos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.photos img{
+    max-width: 100%;
+}
