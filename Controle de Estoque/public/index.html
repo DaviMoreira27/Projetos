@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/index.css">
+    <script src="https://kit.fontawesome.com/9a93fc2a85.js" crossorigin="anonymous"></script>
+    <script src="dist/index.js" type="module"></script>
+    <title>Controle de Estoque</title>
+</head>
+<body>
+   <article class="estoque-prods">
+
+        <h1 id="titulo">Estoque da loja</h1>
+
+    <section class="btns-add">
+        <button id="add-prod">Adicionar Produto</button>
+        <button id="relatorio-prod">Relatórios</button>
+    </section>
+
+    <section class="prods-container">
+        <div class="prod-box">
+            <img src="./assets/img/magnus-supreme.jpg" alt="dinamico">
+            <div class="titles-prod">
+                <h2 id="nome-racao">Magnus Supreme</h2>
+                <div class="titles-row">
+                    <h3 id="peso">15 Kg</h3>
+                    <h3 id="animal">Cachorro</h3>
+                </div>
+                <h3 id="porte">Porte Pequeno</h3>
+            </div>
+            <div class="val-quant">
+                <h2 id="valor">R$ 117,00</h2>
+                <div class="quant-box">
+                    <button id="plus" title="adicionar"><i class="fa-solid fa-plus"></i></button>
+                    <input type="number" placeholder="Quantidade" name="quant-input" id="quant-input">
+                    <button id="minus" title="subtrair"><i class="fa-solid fa-minus"></i></button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+   </article>
+</body>
+</html>
