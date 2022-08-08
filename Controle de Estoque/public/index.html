@@ -6,13 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/index.css">
     <script src="https://kit.fontawesome.com/9a93fc2a85.js" crossorigin="anonymous"></script>
-    <script src="dist/index.js" type="module"></script>
+    <script src="dist/index-animations.js" type="module" defer></script>
     <title>Controle de Estoque</title>
 </head>
 <body>
    <article class="estoque-prods">
 
-        <h1 id="titulo">Estoque da loja</h1>
+    <h1 id="titulo">Estoque da loja</h1>
 
     <section class="btns-add">
         <button id="add-prod">Adicionar Produto</button>
@@ -32,15 +32,42 @@
             </div>
             <div class="val-quant">
                 <h2 id="valor">R$ 117,00</h2>
-                <div class="quant-box">
-                    <button id="plus" title="adicionar"><i class="fa-solid fa-plus"></i></button>
-                    <input type="number" placeholder="Quantidade" name="quant-input" id="quant-input">
-                    <button id="minus" title="subtrair"><i class="fa-solid fa-minus"></i></button>
-                </div>
+                <h2 id="quant">3 Sacos</h2>
             </div>
-
         </div>
     </section>
+   </article>
+
+   <article class="add-prod-form">
+    <form action="#" class="form-adder">
+        <button type="button" id="close" title="Fechar">X</button>
+        <input type="text" name="nome" placeholder="Nome" id="input-nome">
+
+        <div class="peso-quant-form row-form">
+            <input type="text" name="peso" placeholder="Peso" id="input-peso">
+            <input type="number" name="quant" placeholder="Quantidade" id="input-quant">
+        </div>
+
+        <select name="marca" title="Marca" id="select-marca">
+            <option value="Magnus">Magnus</option>
+        </select>
+
+        <div class="animal-porte-form row-form">
+            <select name="animal" title="Animal" id="select-animal">
+                <option value="Cachorro">Cachorro</option>
+            </select>
+            <select name="porte" title="Porte" id="select-porte">
+                <option value="pequeno">Porte Pequeno</option>
+            </select>
+        </div>
+
+        <input type="number" step="0.010" name="valor" placeholder="Valor" id="input-preco">
+
+        <div class="archive-send-form row-form">
+            <input type="file" name="files" placeholder="Fotos" id="input-fotos">
+            <input type="submit" placeholder="Adicionar" value="Adicionar" id="input-submit">
+        </div>
+    </form>
    </article>
 </body>
 </html>
