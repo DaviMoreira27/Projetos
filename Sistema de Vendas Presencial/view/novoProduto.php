@@ -19,33 +19,33 @@ require_once __DIR__ . '/navbar.php';
             <form action="#" class="form-add-produto">
                 <input type="hidden" name="addProd">
 
-                <label for="nome-prod">Nome do produto
-                    <input type="text" name="nome-prod" id="nome-input" required>
+                <label for="nomeProduto">Nome do produto
+                    <input type="text" name="nomeProduto" id="nome-input" required>
                 </label>
 
                 <div class="row-content-prod">
-                    <label for="marca-prod">Marca do produto
-                        <input type="text" name="marca-prod" id="marca-input" required>
+                    <label for="marcaProduto">Marca do produto
+                        <input type="text" name="marcaProduto" id="marca-input" required>
                     </label>
-                    <label for="modelo-prod">Modelo do produto
-                        <input type="text" name="modelo-prod" id="modelo-input" required>
+                    <label for="modeloProduto">Modelo do produto
+                        <input type="text" name="modeloProduto" id="modelo-input" required>
                     </label>
                 </div>
 
                 <div class="row-content-prod">
-                    <label for="quant-prod">Quantidade
-                        <input type="number" min="0" name="quant-prod" id="quant-input" required>
+                    <label for="quantidadeProd">Quantidade
+                        <input type="number" min="0" name="quantidadeProd" id="quant-input" required>
                     </label>
-                    <label for="valor-prod">Valor de Compra
-                        <input type="text" step="0.010" name="valor-prod" id="valor-input" required>
+                    <label for="precoProduto">Valor de Compra
+                        <input type="text" step="0.010" name="precoProduto" id="valor-input" required>
                     </label>
                 </div>
 
-                <label for="codigo-prod">Codigo de Barras
-                    <input type="number" min="0" name="codigo-prod" id="codigo-input" required>
+                <label for="codigoBarras">Codigo de Barras
+                    <input type="number" min="0" name="codigoBarras" id="codigo-input" required>
                 </label>
 
-                <select name="categoria-prod" id="categoria-select">
+                <select name="nomeCategoria" id="categoria-select">
                     <option>Produtos Higiênicos</option>
                 </select>
 
@@ -53,7 +53,7 @@ require_once __DIR__ . '/navbar.php';
 
                 <div id="yourBtn" style="height: 50px; width: 100%;border: 1px dashed #BBB; cursor:pointer;" onclick="getFile()">Escolha seu arquivo de imagem</div>
                 <div style='height: 0px;width:0px; overflow:hidden;'>
-                    <input id="upfile" type="file" value="upload" />
+                    <input id="upfile" type="file" name="img_link" value="upload" />
                 </div>
 
                 <input type="submit" id="submit-input" value="Adicionar">
