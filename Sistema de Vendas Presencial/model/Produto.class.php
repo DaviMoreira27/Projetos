@@ -3,44 +3,24 @@
 class Produto{
 
     public function issetProdutoDados($dados){
-        for($i = 0; $i < count($dados); $i++){
-            if(isset($dados[$i]) && !empty($dados[$i])){
-                return true;
-            }else{
-                return false;
-            }
+        if(array_search('', $dados)){
+            return true;
+        }else{
+            return false;
         }
     }
 
     public function testImagePath($path){
 
-        if (!preg_match("/\.(png|jpg|jpeg|pdf)$/", $path, $ext)) return 0;
-        $ret = null;
-        switch ($ext) {
-            case 'png':
-                $ret = @imagecreatefrompng($path);
-                break;
-            case 'jpeg':
-                $ret = @imagecreatefromjpeg($path);
-                break;
-                // ...
-            default:
-                $ret = 0;
+        $supported_image = array('jpg','jpeg','png', 'pdf');
+
+        $ext = strtolower(pathinfo($path, PATHINFO_EXTENSION)); // Using strtolower to overcome case sensitive
+        if (in_array($ext, $supported_image)) {
+            return true;
+        } else {
+            return false;
         }
-
-        return $ret;
     }
-
-    // public function antiInjectSqlCheck($dados){
-    //     if($this->issetProdutoDados($dados) === true){
-    //         $dadosHEX = [];
-    //         for ($i = 0; $i < count($dados); $i++) {
-    //             $dadosHEX[] = bin2hex($dados[$i]); 
-    //         }
-
-    //         return $dadosHEX;
-    //     }
-    // }
 
 }
 

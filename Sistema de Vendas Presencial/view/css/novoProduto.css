@@ -34,7 +34,7 @@
 .form-add-produto label > input {
     display: flex;
     flex-direction: column;
-    margin-top: 1rem;
+    margin-top: .5rem;
 }
 
 .form-add-produto .row-content-prod{
@@ -52,21 +52,27 @@
     border: 1px solid black;
 }
 
-.form-add-produto #yourBtn {
-    font-family: 'Open Sans', sans-serif;
-    width: 100%;
-    padding: 1rem;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    border: 1px dashed #BBB;
-    text-align: center;
-    background-color: #DDD;
+.choose::-webkit-file-upload-button {
+    color: white;
+    display: inline-block;
+    background: #1CB6E0;
+    border: none;
+    padding: 7px 15px;
+    font-weight: 700;
+    border-radius: 3px;
+    white-space: nowrap;
     cursor: pointer;
+    font-size: 10pt;
 }
 
+
 .form-add-produto #submit-input{
-    width: 50%;
+    width: 40%;
     margin: 0 auto;
+    margin-top: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /* Voltar */
