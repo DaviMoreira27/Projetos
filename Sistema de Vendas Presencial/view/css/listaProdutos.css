@@ -1,53 +1,92 @@
+/* @import './reset.css'; */
 
-#search-input{
-    width: 60rem;
-    padding: 1rem;
-    max-width: 100%;
+.divMain{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10rem;
 }
 
+/* Barra de Pesquisa e Filtros */
+
 .search-bar{
-    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 4rem;
+}
+
+.search-bar input[type=search]{
+    padding: 1rem;
+    border-radius: 10px;
+    border: 1px solid black;
 }
 
 .filters-select{
     display: flex;
-    gap: 10rem;
+    width: 100%;
+    gap: 4rem;
+}
+
+.filters-select select{
     padding: 1rem;
+    border-radius: 10px;
+    border: 1px solid black;
 }
 
-.filters-group1{
-    display: flex;
-    gap: 2rem;
-}
-
-select{
-    padding: .5rem;
-}
-
-.prod-exib{
-    margin-top: 10rem;
-}
-
-.produto-container{
-    display: flex;
-    flex-direction: row;
-    gap: 8rem;
-    align-items: center;
-    background-color: #e7e7e7;
-    padding: 1rem;
-}
-
-.produto-container .titles-prod{
+.filters-select label > select{
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    margin-top: .5rem;
 }
 
-.actions-prod{
+/* Lista de Produtos */
+
+.tabela-produto{
+    width: 1400px;
+    max-width: 100%;
+    /* background-color:; */
+    border: 1px solid black;
+}
+
+.tabela-produto tr{
     display: flex;
-    gap: 1rem;
+    justify-content: space-between;
 }
 
-.actions-prod form input[type="submit"]{
+.tabela-produto tr td{
+    border: 1px solid black;
+    width: 100%;
     padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tabela-produto tr + tr {
+    margin-top: 1rem;
+}
+
+.tabela-produto #values img {
+    width: 150px;
+}
+
+.tabela-produto #values button{
+    padding: .8rem;
+    background-color: transparent;
+    border: none;
+}
+
+.tabela-produto #values #btn-prod-edit i:hover {
+    color: rgb(0, 255, 136);
+    transition: ease .5s;
+}
+
+.tabela-produto #values #btn-prod-delete i:hover {
+    color: #E90000;
+    transition: ease .5s;
+}
+
+#label-table{
+    background-color: rgb(0, 255, 136);
 }

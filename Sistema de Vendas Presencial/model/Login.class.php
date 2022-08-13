@@ -10,7 +10,6 @@ class Login{
     public function validaEmail($email){
         return filter_var($email,
              FILTER_VALIDATE_EMAIL);
-
     }
 
     public function confereErrosEmail($email){

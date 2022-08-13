@@ -16,6 +16,11 @@ body{
     background-color: #eeee;
 }
 
+a{
+    text-decoration: none;
+    color: unset;
+}
+
 .estoque-prods{
     display: flex;
     flex-direction: column;
@@ -117,6 +122,10 @@ button{
     gap: 1rem;
 }
 
+#nome-racao{
+    font-size: 26px;
+}
+
 
 
 /* FORMULARIO DE ADIÇÃO */
@@ -175,3 +184,4 @@ button{
     width: fit-content;
     width: -moz-fit-content;
 }
+

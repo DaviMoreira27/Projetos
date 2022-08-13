@@ -13,7 +13,7 @@
     <nav class="navBar">
         <a id="newBuy" href="#"><button class="botaoCompra">Nova Compra<i class="fa-solid fa-plus"></i></button></a>
         <ul id="menu-list">
-            <a href="#">
+            <a href="listaProdutos.php">
                 <li>Produtos <i class="fa-solid fa-bag-shopping"></i></li>
             </a>
             <a href="#">
