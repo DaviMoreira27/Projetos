@@ -22,6 +22,22 @@ class Produto{
         }
     }
 
+    public function imageUpload($imagemPostKey){
+
+        $ext = strtolower(substr($_FILES[$imagemPostKey]['name'], -4));
+        $random = rand(0, 10000);
+
+        //Definindo um novo nome para o arquivo
+        $new_name = $random . $_FILES[$imagemPostKey]['name'];
+        //Diretório para uploads
+        $dir = '../resources/img/';
+
+        move_uploaded_file($_FILES[$imagemPostKey]['tmp_name'], $dir . $new_name);
+
+        return $dir . $new_name;
+
+    }
+
 }
 
 // String to HEX

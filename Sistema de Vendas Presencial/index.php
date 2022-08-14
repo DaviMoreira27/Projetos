@@ -33,3 +33,12 @@ require_once __DIR__ . "/autoload.php";
 </body>
 </html>
 
+<?php
+
+if (isset($_POST['msg'])) {
+    require_once 'msg.php';
+    $msg = $_POST["msg"];
+    $msgExibir = $MSG[$msg];
+    echo "<script>alert('" . $msgExibir . "');</script>";
+}
+

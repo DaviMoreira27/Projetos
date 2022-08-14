@@ -43,9 +43,8 @@
 /* Lista de Produtos */
 
 .tabela-produto{
-    width: 1400px;
+    width: 1000px;
     max-width: 100%;
-    /* background-color:; */
     border: 1px solid black;
 }
 
@@ -68,7 +67,7 @@
 }
 
 .tabela-produto #values img {
-    width: 150px;
+    width: 100px;
 }
 
 .tabela-produto #values button{

@@ -14,6 +14,8 @@ if (isset($_SESSION['ADM_ID'])) {
         <link rel="stylesheet" href="css/navbar.css">
         <link rel="stylesheet" href="view/css/navbar.css">
         <link rel="stylesheet" href="css/novoProduto.css">
+        <script src="./js/novoProduto.js" defer></script>
+
     </head>
 
     <body id="mainContent">
@@ -42,12 +44,12 @@ if (isset($_SESSION['ADM_ID'])) {
                             <input type="number" min="0" name="quantidadeProd" id="quant-input" required>
                         </label>
                         <label for="precoProduto">Valor de Compra
-                            <input type="text" step="0.010" name="precoProduto" id="valor-input" required>
+                            <input type="number" step="0.01" name="precoProduto" id="valor-input" required>
                         </label>
                     </div>
 
                     <label for="codigoBarras">Codigo de Barras
-                        <input type="number" min="0" name="codigoBarras" id="codigo-input" required>
+                        <input type="number" min="0" name="codigoBarras" id="codigo-input" pattern="[0-9]*" inputmode="numeric" required>
                     </label>
 
                     <select name="idCategoria" id="categoria-select">
@@ -68,20 +70,14 @@ if (isset($_SESSION['ADM_ID'])) {
             </article>
         </main>
     </body>
-    <script>
-        function getFile() {
-            document.getElementById("upfile").click();
-        }
-
-        function sub(obj) {
-            var file = obj.value;
-            var fileName = file.split("\\");
-            document.getElementById("yourBtn").innerHTML = fileName[fileName.length - 1];
-            document.myForm.submit();
-            event.preventDefault();
-        }
-    </script>
 
     </html>
 <?php
+
+    if (isset($_POST['msg'])) {
+        require_once 'msg.php';
+        $msg = $_POST["msg"];
+        $msgExibir = $MSG[$msg];
+        echo "<script>alert('" . $msgExibir . "');</script>";
+    }
 }

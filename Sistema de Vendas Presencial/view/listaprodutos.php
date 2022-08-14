@@ -18,6 +18,7 @@ if (isset($_SESSION['ADM_ID'])) {
         <link rel="stylesheet" href="css/navbar.css">
         <link rel="stylesheet" href="view/css/navbar.css">
         <link rel="stylesheet" href="css/listaProdutos.css">
+        <script src="./js/listaProdutos.js" defer></script>
     </head>
 
     <body id="mainContent">
@@ -83,24 +84,27 @@ if (isset($_SESSION['ADM_ID'])) {
                     if (count($resultBD) > 0) :
                         for ($i = 0; $i < count($resultBD); $i++) :
                     ?>
-                            <tr id="values">
-                                <td>
-                                    <img src="../resources/./img/./omo.jpg" alt="<?=$resultBD[$i]['nomeProduto']?>">
-                                </td>
-                                <td><?= $resultBD[$i]['nomeProduto'] ?></td>
-                                <td><?= $resultBD[$i]['marcaProduto'] ?></td>
-                                <td><?= $resultBD[$i]['quantidadeProd'] ?></td>
-                                <td><?= $resultBD[$i]['precoProduto'] ?></td>
-                                <td><?= $resultBD[$i]['idCategoria'] ?></td>
-                                <td>
-                                    <button id="btn-prod-edit">
-                                        <i class="fa-solid fa-pen fa-2x"></i>
-                                    </button>
-                                    <button id="btn-prod-delete">
-                                        <i class="fa-solid fa-trash fa-2x"></i>
-                                    </button>
-                                </td>
-                            </tr>
+                            <a href="#">
+                                <tr id="values">
+                                    <td>
+                                        <img src="<?= $resultBD[$i]['img_link'] ?>" alt="<?= $resultBD[$i]['nomeProduto'] ?>">
+                                    </td>
+                                    <td><?= $resultBD[$i]['nomeProduto'] ?></td>
+                                    <td><?= $resultBD[$i]['marcaProduto'] ?></td>
+                                    <td><?= $resultBD[$i]['quantidadeProd'] ?></td>
+                                    <td><?= $resultBD[$i]['precoProduto'] ?></td>
+                                    <td><?= $resultBD[$i]['idCategoria'] ?></td>
+                                    <td>
+                                        <button id="btn-prod-edit">
+                                            <i class="fa-solid fa-pen fa-2x"></i>
+                                        </button>
+                                        <button id="btn-prod-delete">
+                                            <i class="fa-solid fa-trash fa-2x"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                            </a>
+
                     <?php
                         endfor;
                     else :
@@ -118,4 +122,10 @@ if (isset($_SESSION['ADM_ID'])) {
 
 <?php
 
+    if (isset($_POST['msg'])) {
+        require_once 'msg.php';
+        $msg = $_POST["msg"];
+        $msgExibir = $MSG[$msg];
+        echo "<script>alert('" . $msgExibir . "');</script>";
+    }
 }

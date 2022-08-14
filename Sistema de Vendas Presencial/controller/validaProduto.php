@@ -16,7 +16,7 @@ if (isset($_POST['addProd'])) : //Adicionar Produto
     $dados["modeloProduto"] = $_REQUEST["modeloProduto"];
     $dados["quantidadeProd"] = $_REQUEST["quantidadeProd"];
     $dados["idCategoria"] = $_REQUEST["idCategoria"];
-    $dados["img_link"] = $_REQUEST["img_link"];
+    $dados["img_link"] = $produto->imageUpload('img_link');
 
     if ($produto->issetProdutoDados($dados) != true) {
         if ($produto->testImagePath($dados['img_link'])) {
@@ -27,7 +27,7 @@ if (isset($_POST['addProd'])) : //Adicionar Produto
 
 ?>
             <form action="../view/listaprodutos.php" name="myForm" id="myForm" method="post">
-                <input type="hidden" name="msg" value="OP50">
+                <input type="hidden" name="msg" value="FR50">
             </form>
             <script>
                 document.getElementById('myForm').submit();
@@ -38,8 +38,8 @@ if (isset($_POST['addProd'])) : //Adicionar Produto
         } else {
 
         ?>
-            <form action="../view/novoProduto.php" name="myForm" id="myForm" method="post">
-                <input type="hidden" name="msg" value="OP50">
+            <form action="../view/listaProdutos.php" name="myForm" id="myForm" method="post">
+                <input type="hidden" name="msg" value="FR19">
             </form>
             <script>
                 document.getElementById('myForm').submit();
@@ -50,7 +50,7 @@ if (isset($_POST['addProd'])) : //Adicionar Produto
     } else {
         ?>
         <form action="../view/novoProduto.php" name="myForm" id="myForm" method="post">
-            <input type="hidden" name="msg" value="OP50">
+            <input type="hidden" name="msg" value="FR00">
         </form>
         <script>
             document.getElementById('myForm').submit();
@@ -58,5 +58,4 @@ if (isset($_POST['addProd'])) : //Adicionar Produto
 
 <?php
     }
-
 endif;
